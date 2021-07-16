@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import java.lang.String?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="544.0" prefWidth="1252.0" style="-fx-background-color: #ffffff;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.pos.controller.StudentFormController">
+   <children>
+      <Label layoutX="501.0" layoutY="5.0" prefHeight="42.0" prefWidth="230.0" text="Student Form" underline="true">
+         <font>
+            <Font name="Times New Roman Bold Italic" size="31.0" />
+         </font>
+      </Label>
+      <JFXTextField fx:id="txtID" focusColor="#a83200" labelFloat="true" layoutX="51.0" layoutY="78.0" onAction="#txtIDOnAction" prefHeight="37.0" prefWidth="416.0" promptText="Student ID">
+         <font>
+            <Font name="Times New Roman" size="20.0" />
+         </font>
+      </JFXTextField>
+      <JFXTextField fx:id="txtStudentName" focusColor="#a83200" labelFloat="true" layoutX="52.0" layoutY="148.0" prefHeight="37.0" prefWidth="416.0" promptText="Student Name">
+         <font>
+            <Font name="Times New Roman" size="20.0" />
+         </font>
+      </JFXTextField>
+      <JFXTextField fx:id="txtAddress" focusColor="#a83200" labelFloat="true" layoutX="52.0" layoutY="233.0" prefHeight="37.0" prefWidth="416.0" promptText="Address">
+         <font>
+            <Font name="Times New Roman" size="20.0" />
+         </font>
+      </JFXTextField>
+      <JFXTextField fx:id="txtContact" focusColor="#a83200" labelFloat="true" layoutX="52.0" layoutY="309.0" prefHeight="37.0" prefWidth="416.0" promptText="Contact">
+         <font>
+            <Font name="Times New Roman" size="20.0" />
+         </font>
+      </JFXTextField>
+      <JFXTextField fx:id="txtDOB" focusColor="#a83200" labelFloat="true" layoutX="51.0" layoutY="385.0" prefHeight="37.0" prefWidth="416.0" promptText="Date Of Birth">
+         <font>
+            <Font name="Times New Roman" size="20.0" />
+         </font>
+      </JFXTextField>
+      <Label layoutX="52.0" layoutY="462.0" text="Gender">
+         <font>
+            <Font name="Times New Roman" size="20.0" />
+         </font>
+      </Label>
+      <Separator layoutX="592.0" layoutY="56.0" orientation="VERTICAL" prefHeight="455.0" prefWidth="29.0" />
+      <TableView fx:id="tblStudent" layoutX="616.0" layoutY="213.0" prefHeight="324.0" prefWidth="629.0" stylesheets="@tbl.css">
+        <columns>
+          <TableColumn fx:id="colID" prefWidth="75.0" text="ID" />
+          <TableColumn fx:id="colName" prefWidth="75.0" text="Name" />
+            <TableColumn fx:id="colAddress" prefWidth="89.0" text="Address" />
+            <TableColumn fx:id="colContact" prefWidth="108.0" text="Contact" />
+            <TableColumn fx:id="colDOB" prefWidth="87.0" text="DOB" />
+            <TableColumn fx:id="colGender" prefWidth="97.0" text="Gender" />
+            <TableColumn fx:id="colDelete" prefWidth="97.0" text="Delete" />
+        </columns>
+         <styleClass>
+            <String fx:value="arrow" />
+            <String fx:value="column-drag-header" />
+            <String fx:value="column-header" />
+            <String fx:value="column-header-background" />
+            <String fx:value="column-overlay" />
+            <String fx:value="column-resize-line" />
+            <String fx:value="filler" />
+            <String fx:value="jfx-rippler" />
+            <String fx:value="jfx-text-field" />
+            <String fx:value="tree-table-view" />
+            <String fx:value="tree-table-row-cell" />
+            <String fx:value="tree-table-cell" />
+            <String fx:value="tree-disclosure-node" />
+            <String fx:value="sort-order-dot" />
+            <String fx:value="jfx-text-field" />
+            <String fx:value="label" />
+         </styleClass>
+      </TableView>
+      <JFXButton fx:id="btnRegister" buttonType="RAISED" layoutX="491.0" layoutY="121.0" onAction="#btnRegisterOnAction" prefHeight="32.0" prefWidth="104.0" style="-fx-background-color: #ced6e0; -fx-background-radius: 20;" text="Register">
+         <ripplerFill>
+            <LinearGradient endX="1.0" endY="1.0">
+               <stops>
+                  <Stop color="#00ff2f" />
+                  <Stop color="#4ad0d9" offset="1.0" />
+               </stops>
+            </LinearGradient>
+         </ripplerFill>
+         <font>
+            <Font name="Times New Roman Bold Italic" size="18.0" />
+         </font>
+      </JFXButton>
+      <JFXButton fx:id="btnUpdate" buttonType="RAISED" layoutX="491.0" layoutY="197.0" onAction="#btnUpdateOnAction" prefHeight="32.0" prefWidth="104.0" style="-fx-background-color: #ced6e0; -fx-background-radius: 20;" text="Update">
+         <ripplerFill>
+            <LinearGradient endX="1.0" endY="1.0">
+               <stops>
+                  <Stop color="#00ff2f" />
+                  <Stop color="#34eefc" offset="1.0" />
+               </stops>
+            </LinearGradient>
+         </ripplerFill>
+         <font>
+            <Font name="Times New Roman Bold Italic" size="18.0" />
+         </font>
+      </JFXButton>
+      <ImageView fitHeight="81.0" fitWidth="104.0" layoutX="1164.0" layoutY="1.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../asserts/kplqty86sadwhd8lk33j.png" />
+         </image>
+      </ImageView>
+      <HBox alignment="BASELINE_CENTER" layoutX="111.0" layoutY="462.0" prefHeight="37.0" prefWidth="360.0" spacing="20.0">
+         <children>
+            <RadioButton fx:id="rbtnMale" mnemonicParsing="false" prefHeight="26.0" prefWidth="135.0" text="Male">
+               <font>
+                  <Font name="Times New Roman Italic" size="19.0" />
+               </font>
+               <toggleGroup>
+                  <ToggleGroup fx:id="group" />
+               </toggleGroup>
+            </RadioButton>
+            <RadioButton fx:id="rbtnFemale" mnemonicParsing="false" prefHeight="26.0" prefWidth="96.0" text="Female" toggleGroup="$group">
+               <font>
+                  <Font name="Times New Roman Italic" size="19.0" />
+               </font>
+            </RadioButton>
+         </children>
+      </HBox>
+      <JFXComboBox fx:id="cmbCourse" layoutX="702.0" layoutY="81.0" onAction="#setCourseItem" prefHeight="37.0" prefWidth="171.0" />
+      <Label layoutX="621.0" layoutY="93.0" prefHeight="32.0" prefWidth="81.0" text="Code">
+         <font>
+            <Font name="Times New Roman" size="20.0" />
+         </font>
+      </Label>
+      <JFXTextField fx:id="txtCourseName" focusColor="#a83200" labelFloat="true" layoutX="908.0" layoutY="84.0" prefHeight="37.0" prefWidth="312.0" promptText="Course">
+         <font>
+            <Font name="Times New Roman" size="20.0" />
+         </font>
+      </JFXTextField>
+      <JFXButton fx:id="btnClear" buttonType="RAISED" layoutX="491.0" layoutY="270.0" onAction="#btnClearOnAction" prefHeight="32.0" prefWidth="104.0" style="-fx-background-color: #ced6e0; -fx-background-radius: 20;" text="Clear">
+         <ripplerFill>
+            <LinearGradient endX="1.0" endY="1.0">
+               <stops>
+                  <Stop color="#00ff2f" />
+                  <Stop color="#34eefc" offset="1.0" />
+               </stops>
+            </LinearGradient>
+         </ripplerFill>
+         <font>
+            <Font name="Times New Roman Bold Italic" size="18.0" />
+         </font>
+      </JFXButton>
+      <JFXTextField fx:id="txtDuration" focusColor="#a83200" labelFloat="true" layoutX="617.0" layoutY="160.0" prefHeight="37.0" prefWidth="184.0" promptText="Duration">
+         <font>
+            <Font name="Times New Roman" size="20.0" />
+         </font>
+      </JFXTextField>
+      <JFXTextField fx:id="txtCourseType" focusColor="#a83200" labelFloat="true" layoutX="837.0" layoutY="160.0" prefHeight="37.0" prefWidth="213.0" promptText="Course Type">
+         <font>
+            <Font name="Times New Roman" size="20.0" />
+         </font>
+      </JFXTextField>
+      <Label fx:id="lblDate" alignment="BASELINE_CENTER" layoutX="924.0" layoutY="16.0" prefHeight="42.0" prefWidth="230.0" textFill="#eb0000">
+         <font>
+            <Font name="Times New Roman Bold Italic" size="23.0" />
+         </font>
+      </Label>
+      <JFXTextField fx:id="txtRegFee" focusColor="#a83200" labelFloat="true" layoutX="1075.0" layoutY="160.0" prefHeight="37.0" prefWidth="156.0" promptText="Reg: Fee">
+         <font>
+            <Font name="Times New Roman" size="20.0" />
+         </font>
+      </JFXTextField>
+   </children>
+</AnchorPane>
